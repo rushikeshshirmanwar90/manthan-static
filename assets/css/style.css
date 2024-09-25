@@ -10,7 +10,7 @@
   /**
    * colors
    */
-  --royal-green : #0E3234;
+  --royal-green: #0e3234;
   --dark-jungle-green: hsl(188, 63%, 7%);
   --prussian-blue: hsl(200, 69%, 14%);
   --raisin-black-1: hsl(227, 29%, 13%);
@@ -26,7 +26,6 @@
   --white: hsl(0, 0%, 100%);
   --black: hsl(0, 0%, 0%);
   --opal: hsl(180, 20%, 62%);
-  
 
   /**
    * typography
@@ -1735,4 +1734,82 @@ a {
   .footer-link-box {
     flex-basis: 700px;
   }
+}
+
+/* =========================================  */
+
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+}
+
+.contact-left,
+.contact-right {
+  flex: 1;
+  min-width: 10rem;
+  margin: 20px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.contact-left h2,
+.contact-right h2 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.contact-right form {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-box {
+  margin-bottom: 15px;
+}
+
+.input-box input,
+.input-box textarea {
+  width: 100%;
+  padding: 10px;
+  background-color: #fff;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+}
+
+.input-box input::placeholder,
+.input-box textarea::placeholder {
+  color: #888;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #e7b759;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: 600;
+}
+
+button:hover {
+  background-color: #e8a215;
+}
+
+.whatsapp-btn {
+  background-color: #25d366;
+}
+
+.whatsapp-btn:hover {
+  background-color: #1db954;
 }
