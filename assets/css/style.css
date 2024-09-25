@@ -1743,6 +1743,11 @@ a {
   flex-wrap: wrap;
   justify-content: center;
   padding: 20px;
+  gap: 5rem;
+}
+
+.contact-left {
+  max-width: 50rem !important;
 }
 
 .contact-left,
@@ -1790,6 +1795,7 @@ a {
 .button-container {
   display: flex;
   justify-content: space-between;
+  gap: 5rem;
 }
 
 button {
