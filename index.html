@@ -31,87 +31,22 @@
     <!-- 
       - #HEADER
     -->
-
-    <header class="header" data-header>
-      <div class="overlay" data-overlay></div>
-
-      <div class="header-bottom">
-        <div class="container">
-          <a
-            href="#"
-            class="logo"
-            style="width: fit-content; height: 3rem; position: relative"
-          >
-            <img
-              src="./assets/images/logo-mini.png"
-              alt="Homeverse logo"
-              style="width: 6rem; height: 6rem; position: absolute; top: -2rem"
-            />
-          </a>
-
-          <nav class="navbar" data-navbar>
-            <div class="navbar-top">
-              <a href="#" class="logo">
-                <img src="./assets/images/logo-mini.png" alt="Homeverse logo" />
-              </a>
-
-              <button
-                class="nav-close-btn"
-                data-nav-close-btn
-                aria-label="Close Menu"
-                style="display: none"
-              >
-                <ion-icon name="close-outline"></ion-icon>
-              </button>
-            </div>
-
-            <div class="navbar-bottom">
-              <ul class="navbar-list">
-                <li>
-                  <a href="#home" class="navbar-link" data-nav-link>Home</a>
-                </li>
-
-                <li>
-                  <a href="#about" class="navbar-link" data-nav-link>About</a>
-                </li>
-
-                <li>
-                  <a href="#service" class="navbar-link" data-nav-link
-                    >Service</a
-                  >
-                </li>
-
-                <li>
-                  <a href="#property" class="navbar-link" data-nav-link
-                    >Property</a
-                  >
-                </li>
-
-                <li>
-                  <a href="#blog" class="navbar-link" data-nav-link>Blog</a>
-                </li>
-
-                <li>
-                  <a href="#contact" class="navbar-link" data-nav-link
-                    >Contact</a
-                  >
-                </li>
-              </ul>
-            </div>
-          </nav>
-
-          <div class="header-bottom-actions">
-            <button
-              class="header-bottom-actions-btn"
-              data-nav-open-btn
-              aria-label="Open Menu"
-            >
-              <ion-icon name="menu-outline"></ion-icon>
-              <span>Menu</span>
-            </button>
-          </div>
+    <header class="header">
+      <nav class="nav">
+        <div class="logo">
+          <a href="#"><img src="./assets/images/logo-mini.png" alt="logo" /></a>
         </div>
-      </div>
+        <div class="nav__menu__btn" id="menu-btn">
+          <i class="ri-menu-line"></i>
+        </div>
+        <ul class="nav__links" id="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#project">our project</a></li>
+          <li><a href="#ams">Amenities</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
     </header>
 
     <main>
@@ -316,18 +251,27 @@
               <p class="section-subtitle">About Us</p>
 
               <h2 class="h2 section-title">
-                The Leading Real Estate Rental Marketplace.
+                Pankaj Sharma: Shaping the Future of Real Estate
               </h2>
 
               <p class="about-text">
-                Over 39,000 people work for us in more than 70 countries all
-                over the This breadth of global coverage, combined with
-                specialist services
+                With more than 20 years of hands-on experience in sales and
+                marketing across the real estate and banking industries, Mr.
+                Pankaj Sharma is a trailblazer and the driving force behind
+                Hallmark Realty’s impressive growth and success. His sharp
+                business acumen, coupled with a forward-thinking approach, has
+                helped shape the company's trajectory, setting new benchmarks in
+                the industry. As Hallmark Realty's principal architect, Mr.
+                Sharma brings creativity and uniqueness to each project,
+                ensuring a blend of innovation and excellence. His unwavering
+                commitment to ethical business practices and high standards has
+                earned him a prestigious reputatio
               </p>
 
               <p class="callout">
-                "Enimad minim veniam quis nostrud exercitation llamco laboris.
-                Lorem ipsum dolor sit amet"
+                "In recognition of his contributions to the real estate
+                industry, Mr. Sharma was awarded the "Real Estate Excellence
+                Award in Sales & Marketing" in 2023 by FM 91.1.""
               </p>
 
               <a href="#service" class="btn">Contact Us Now</a>
@@ -852,6 +796,27 @@
     <!-- 
     - custom js link
   -->
+
+    <script>
+      const menuBtn = document.getElementById("menu-btn");
+      const navLinks = document.getElementById("nav-links");
+
+      menuBtn.addEventListener("click", () => {
+        navLinks.classList.toggle("open");
+        menuBtn.classList.toggle("ri-menu-line");
+        menuBtn.classList.toggle("ri-close-line");
+      });
+
+      // Close menu when clicking outside
+      document.addEventListener("click", (e) => {
+        if (!navLinks.contains(e.target) && !menuBtn.contains(e.target)) {
+          navLinks.classList.remove("open");
+          menuBtn.classList.remove("ri-close-line");
+          menuBtn.classList.add("ri-menu-line");
+        }
+      });
+    </script>
+
     <script src="./assets/js/script.js"></script>
 
     <!-- 
