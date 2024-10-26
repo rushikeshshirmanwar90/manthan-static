@@ -1674,7 +1674,7 @@ a {
   background-color: #fff;
   border: none;
   border-radius: 5px;
-  color: #fff;
+  color: #333;
 }
 
 .input-box input::placeholder,
@@ -1704,6 +1704,10 @@ button:hover {
 
 .whatsapp-btn {
   background-color: #25d366;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  padding: 9px 8px;
 }
 
 .whatsapp-btn:hover {
